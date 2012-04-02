@@ -1,3 +1,1 @@
-Hello World
-!
-Yup
+Hello World!
