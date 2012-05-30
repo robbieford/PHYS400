@@ -16,6 +16,7 @@ def is_triangle_dialogue():
 #is_triangle_dialogue()
 
 #5.3
+#This code goes out and comes back tracing out a half "snowflake" pattern.
 def draw(t,length,n):
 	if n==0:
 		return
@@ -30,9 +31,43 @@ def draw(t,length,n):
 
 from TurtleWorld import *
 
+#world = TurtleWorld()
+#bob = Turtle()
+#print bob
+#bob.delay = 0.01
+#draw(bob, 5, 10)
+#wait_for_user()
+
+#5.4.1
+def draw_koch(t, x):
+	if x < 3:
+		fd(t,x)
+	else:
+		draw_koch(t, x/3)
+		lt(t,60)
+		draw_koch(t, x/3)
+		rt(t,120)
+		draw_koch(t, x/3)
+		lt(t, 60)
+		draw_koch(t, x/3)
+		
+#world = TurtleWorld()
+#bob = Turtle()
+#print bob
+#bob.delay = 0.01
+#draw_koch(bob, 200)
+#wait_for_user()
+
+def draw_snowflake(t,x):
+	draw_koch(t,x)
+	rt(t,120)
+	draw_koch(t,x)
+	rt(t,120)
+	draw_koch(t,x)
+
 world = TurtleWorld()
 bob = Turtle()
 print bob
 bob.delay = 0.01
-draw(bob, 5, 10)
+draw_snowflake(bob, 200)
 wait_for_user()
