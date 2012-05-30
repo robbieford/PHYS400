@@ -58,6 +58,7 @@ def draw_koch(t, x):
 #draw_koch(bob, 200)
 #wait_for_user()
 
+#5.4.2
 def draw_snowflake(t,x):
 	draw_koch(t,x)
 	rt(t,120)
